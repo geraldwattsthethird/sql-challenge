@@ -21,10 +21,10 @@ select * from department_manager;
 
 create table employees (
 	emp_no int not null,
-	emp_title_id varchar not null,
+	emp_title_id varchar(30) not null,
 	birth_date date not null,
-	first_name varchar(15) not null,
-	last_name varchar(15) not null,
+	first_name varchar(30) not null,
+	last_name varchar(30) not null,
 	sex varchar not null,
 	hire_date date not null
 );
