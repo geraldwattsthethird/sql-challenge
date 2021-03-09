@@ -64,3 +64,11 @@ select employees.emp_no, employees.last_name, employees.first_name, employees.se
 from employees
 inner join salaries on
 employees.emp_no = salaries.emp_no;
+
+--List first name, last name, and hire date for employees who were hired in 1986.
+select emp_no, first_name, last_name, hire_date from Employees
+where hire_date >= '1985-12-31'
+and hire_date < '1987-01-01';
+
+
+
