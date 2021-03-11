@@ -6,7 +6,7 @@ drop table salaries;
 drop table titles;
 
 create table department_employees (
-	emp_no INT not null,
+	emp_no int not null,
 	dept_no varchar(30) not null,
 	foreign key (emp_no) references employees(emp_no),
 	foreign Key (dept_no) references departments(dept_no)
@@ -52,7 +52,7 @@ create table salaries (
 select * from salaries;
 
 create table titles (
-	title_id varchar not null,
+	title_id varchar(15) not null,
 	title varchar(30) not null,
 	primary key (title_id)
 );
@@ -111,3 +111,6 @@ where dept_name = 'Sales' or
 	  dept_name = 'Development';
 
 --In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+SELECT last_name, COUNT(last_name) FROM Employees
+GROUP BY last_name
+ORDER BY count(last_name) desc;
